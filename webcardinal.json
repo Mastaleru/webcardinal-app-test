@@ -26,6 +26,9 @@
         },
         {
           "name": "webc-skin"
+        },
+        {
+          "name": "template-inception-problem-page"
         }
       ]
     },
