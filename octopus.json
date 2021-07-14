@@ -6,7 +6,7 @@
       "actions": [
         {
           "type": "smartClone",
-          "src": "https://github.com/webcardinal/webcardinal-bundler",
+          "src": "https://github.com/Mastaleru/webcardinal-bundler",
           "target": "./.dev",
           "collectLog": false
         },
@@ -59,10 +59,11 @@
       "actions": [
         {
           "type": "buildWebCardinalComponents",
-          "src": "./.webcardinal",
+          "src": "./.dev/webcardinal/.webcardinal",
           "target": "./webcardinal",
           "options": {
-            "DEV": true
+            "DEV": true,
+            "devComponents": ["webcardinal-core"]
           }
         }
       ]
