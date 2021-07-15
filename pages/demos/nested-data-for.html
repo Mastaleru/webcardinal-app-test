@@ -1,0 +1,51 @@
+<webc-container controller="demos/nestedDataForCtrl">
+
+
+    <div data-if = "@continentsNotEmpty">
+        <div slot="true">
+            CONTINENTS NOT EMPTY
+        </div>
+        <div slot="false">
+            CONTINENTS ARE EMPTY
+        </div>
+    </div>
+
+    <hr/>PSK-CONDITION
+
+    <psk-condition condition="@continentsNotEmpty">
+        <div slot="condition-true">
+            <webc-template template="test-template" view-model="@"></webc-template>
+        </div>
+        <div slot="condition-false">
+            CONTINENTS ARE EMPTY
+        </div>
+    </psk-condition>
+
+
+    <psk-button label="Psk Button" disabled="@btnDisabled"></psk-button>
+    <button disabled="@btnDisabled"> Normal Button</button>
+    <div data-for="@continents" style="background: greenyellow">
+        <div style="margin-left: 50px"> Continent name: {{@name}}
+            <div data-for="@countries">
+                <div style=" background: green; margin: 30px">
+                    Country name: {{@name}}<br/>
+                    <div style="margin-left: 100px">
+                        People:
+                        <div data-for="@people">
+                            <span>{{@}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+    <button data-tag="remove-last">Remove Last Continent</button>
+    <button data-tag="remove-last-country">Remove Last Country</button>
+    <button data-tag="remove-last-people">Remove Last People</button>
+    <button data-tag="add-new">Add new Continent</button>
+    <button data-tag="change-last">Change Last</button>
+
+
+</webc-container>

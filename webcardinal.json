@@ -29,6 +29,10 @@
         },
         {
           "name": "template-inception-problem-page"
+        },
+        {
+          "name": "Nested data-for",
+          "src": "nested-data-for.html"
         }
       ]
     },
