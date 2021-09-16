@@ -1,5 +1,6 @@
 {
   "pagesPathname": "pages",
+
   "pagesFallback": {
     "name": "Home"
   },
@@ -11,6 +12,17 @@
     },
     {
       "name": "About"
+    },
+    {
+      "name": "Barcode"
+    },
+    {
+      "name": "Test",
+      "path": "/test/test1"
+    },
+    {
+      "name": "Nested data-for",
+      "src": "nested-data-for.html"
     },
     {
       "name": "Demos",
@@ -46,5 +58,7 @@
       "src": "https://privatesky.xyz/pages/faq.html"
     }
   ],
-  "theme": "clear-sky-theme"
+  "theme": "clear-sky-theme",
+  "translations": true,
+  "skin":"en"
 }

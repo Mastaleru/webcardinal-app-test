@@ -1,0 +1,6 @@
+<webc-container controller="BarCodeCtrl">
+    <div data-if='@active'>
+        <psk-barcode-scanner slot="true" normal-size data="@data"></psk-barcode-scanner>
+        <div slot="false" >Loading</div>
+    </div>
+</webc-container>

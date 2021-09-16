@@ -1,0 +1,56 @@
+<psk-page title="Titlu">
+<webc-container controller ="TestController" >
+
+
+        Months
+
+        <div data-for="@months">
+                {{@name}} {{@selected.checked}}
+                <psk-checkbox data-view-model="@selected" ></psk-checkbox>
+        </div>
+
+        <psk-checkbox view-model="@selectAllMonths"></psk-checkbox>
+
+
+        <button data-tag="ro">Romana</button>
+        <button data-tag="en">English</button>
+
+        {{$translationWord}}
+
+        {{@name}}
+        <hr/>
+        <div data-if="@condition">
+                        <div slot="true" data-for="@children">
+
+                                <div>Name: {{ @name}}</div>
+                                <div>Name: {{ @age}}</div>
+
+
+                                <div data-if="@toggleGrade">
+                                        <ol slot="true" data-for="@grades">
+                                                <li>{{ @ }}</li>
+                                        </ol>
+                                        <button slot="true" data-tag="hideGrades"> Hide Grades</button>
+                                        <button slot="false" data-tag="showGrades"> Show Grades</button>
+                                </div>
+                        </div>
+        </div>
+        <hr/>
+        <br/>
+        <button data-tag="toggleChildren">Toggle Chidren</button>
+
+
+        <webc-container controller="SomeController" data-view-model="@">
+                {{ @myProperty}}
+        </webc-container>
+
+
+        <psk-select view-model="nationality"></psk-select>
+        <psk-select  view-model="continents"></psk-select>
+
+        <psk-date-input view-model="startDate"></psk-date-input>
+
+
+
+</webc-container>
+</psk-page>
